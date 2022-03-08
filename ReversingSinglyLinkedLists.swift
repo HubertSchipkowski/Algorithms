@@ -75,12 +75,14 @@ func start() {
 
 func middle() {
     currentNode = nextNode
+    
     if currentNode?.next == nil {
-        stop = true
-        
+        stop = true 
     }
+    
     nextNode = currentNode?.next
     currentNode?.next = previousNode
+    
     if !stop {
         previousNode = currentNode
     }

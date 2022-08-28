@@ -1,6 +1,6 @@
 /* 
 Problem:
-Deliver the sum of all multiples of some factor f1 and some factor f2 of natural numbers in a given scope (size).
+Deliver the sum of all multiples of some factor f1 or some factor f2 of natural numbers in a given scope (size).
 
 Solution:
 "Container Algorithm" (Big O of (1))

@@ -6,7 +6,7 @@ Solution for input factors that are not multiples of each other:
 "Container Algorithm" (Big O of (1))
 */
 
-func solve(size: Int, f1: Int, f2: Int) -> Int {
+func containerAlgorithm1(size: Int, f1: Int, f2: Int) -> Int {
     let c = f1 * f2
     let i1: Double = (Double(size)/Double(f1)).rounded(.down)
     let i2: Double = (Double(size)/Double(f2)).rounded(.down)
@@ -21,7 +21,7 @@ func solve(size: Int, f1: Int, f2: Int) -> Int {
 
 // Here is an even simpler geometric approach
 
-func containerAlgorithm(size: Int, f1: Int, f2: Int) -> Int {
+func containerAlgorithm2(size: Int, f1: Int, f2: Int) -> Int {
     let c = Double(f1 * f2)
     let i1: Double = (Double(size)/Double(f1)).rounded(.down)
     let i2: Double = (Double(size)/Double(f2)).rounded(.down)

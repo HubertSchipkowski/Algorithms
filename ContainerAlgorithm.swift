@@ -6,22 +6,11 @@ Solution for input factors that are not multiples of each other:
 "Container Algorithm" (Big O of (1))
 */
 
-func containerAlgorithm1(size: Int, f1: Int, f2: Int) -> Int {
-    let c = f1 * f2
-    let i1: Double = (Double(size)/Double(f1)).rounded(.down)
-    let i2: Double = (Double(size)/Double(f2)).rounded(.down)
-    let ic: Double = (Double(size)/Double(c)).rounded(.down)
-    
-    let r1 = (i1 + (i1 * ((i1-1) / 2))) * Double(f1)
-    let r2 = (i2 + (i2 * ((i2-1) / 2))) * Double(f2)
-    let rc = (ic + (ic * ((ic-1) / 2))) * Double(c)
-    
-    return Int(r1 + r2 - rc)
-}
 
-// Here is an even simpler geometric approach
-
-func containerAlgorithm2(size: Int, f1: Int, f2: Int) -> Int {
+/* A geometric approach where the sum of multiples of any given number
+within a certain scope simply just form an area of a diagonalized rectangle: (a * b) / 2.
+*/
+func containerAlgorithm(size: Int, f1: Int, f2: Int) -> Int {
     let c = Double(f1 * f2)
     let i1: Double = (Double(size)/Double(f1)).rounded(.down)
     let i2: Double = (Double(size)/Double(f2)).rounded(.down)
